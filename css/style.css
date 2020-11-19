@@ -456,6 +456,10 @@ template {
   background-color: #EC1F46;
 }
 
+.search__image {
+  width: 16px;
+}
+
 .user {
   display: -webkit-box;
   display: -ms-flexbox;
