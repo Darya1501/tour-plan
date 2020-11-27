@@ -42,6 +42,15 @@
         width: 100%
   .booking, .map
     width: 340px
+  .packages
+    &__grid
+      grid-template: 500px 500px / 1fr 1fr
+  .grid
+    &-item
+      &:nth-child(1)
+        display: none
+      &__button
+        padding: 10px 15px
   .reviews
     &-slider
       &__item
@@ -105,6 +114,27 @@
     width: 100%
   .map
     width: 100%
+  .packages
+    &__grid
+      grid-template: 420px 420px / 1fr 1fr
+  .grid
+    &-item
+      &__image
+        height: 200px
+      &__booking
+        padding: 20px 25px
+      &__room
+        margin-bottom: 14px
+      &__price
+      &--old
+        font-size: 10px
+        line-height: 14px
+      &--new
+        font-weight: bold
+        font-size: 20px
+        line-height: 26px
+      &__button
+        font-size: 10px
   .newsletter
     &-wrapper
       max-width: 576px
@@ -155,6 +185,21 @@
       height: 250px
     &__slider
       margin-bottom: 20px
+  .packages
+    &__title
+      font-size: 20px
+      margin-bottom: 10px
+    &__grid
+      grid-template: 420px/ 1fr
+      margin-bottom: 30px
+  .grid
+    &-item
+      &__image
+        width: 100%
+      &:nth-child(2n)
+        display: none
+      &__show
+        display: block
   .newsletter
     padding: 76px 0 83px 0
   .subscribe
