@@ -10,10 +10,11 @@
       margin-left: 14px
       margin-top: 4px
     &__name
-      margin-top: 4px
+      margin-top: 5px
       margin-bottom: 0
     &__description
-      margin: 5px 0
+      font-size: 12px
+      line-height: 15px
   &-name
     font-size: 24px
     line-height: 30px
@@ -71,6 +72,11 @@
         background-image: url(../img/arrow-prev.svg)
 .stars
   width: 100%
+  display: flex
+  height: 8px
+.star
+  margin-right: 2px
+
 .offer
   font-size: 10px
   line-height: 13px
@@ -103,11 +109,12 @@
   border-radius: 8px
   width: 350px
   min-height: 210px
-  padding: 28px
+  padding: 29px 29px 26px 27px
   &__info
     display: flex
+    align-items: center
     justify-content: space-between
-    margin-bottom: 9px
+    margin-bottom: 10px
   &__price
     display: flex
     flex-direction: column
@@ -120,7 +127,7 @@
     line-height: 33px
   &__per-room
     font-size: 12px
-    line-height: 16px
+    line-height: 12px
   &__text
     display: flex
     align-items: center
@@ -150,6 +157,7 @@
     margin-left: 8px
   &__button
     width: 100%
+    max-width: 295px
     min-height: 45px
     background-color: $primary
     color: $light
@@ -158,7 +166,6 @@
     font-weight: 600
     font-size: 14px
     line-height: 19px
-
 .map
   width: 350px
   height: 213px
