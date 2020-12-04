@@ -7,6 +7,7 @@
     grid-template-columns: repeat(4, minmax(min-content, 1fr))
     grid-gap: 20px
     grid-auto-rows: minmax(40px, min-content)
+    margin-bottom: 100px
   &__logo
     grid-row: 1 / 3
     width: 166px
@@ -91,3 +92,17 @@
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
+  &-bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-disclaimer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 283px
+    margin-left: 50%
+    transform: translateX(-50%)
+    &__item
+      font-size: 12px
+      line-height: 15px

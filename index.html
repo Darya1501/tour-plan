@@ -437,8 +437,8 @@
         subscribe to our
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
-      <form action="#" class="subscribe newsletter__subscribe">
-        <input type="text" class="subscribe__input" placeholder="Your email address"/>
+      <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
+        <input type="text" class="subscribe__input" placeholder="Your email address" name="email"/>
         <button class="subscribe__button">Send</button>
       </form>
     </div>
@@ -708,7 +708,17 @@
         <!-- /.footer__contact-form -->
       </div>
       <!-- /.footer-wrapper -->
-    </div>
+
+      <div class="footer-bottom">
+        <ul class="footer-disclaimer">
+          <li class="footer-disclaimer__item">Disclaimer</li>
+          <li class="footer-disclaimer__item">Conditions of use</li>
+          <li class="footer-disclaimer__item">Cancellation policy</li>
+        </ul>
+        <img src="img/footer-bottom.png" alt="">
+      </div>
+      <!-- /.footer-bottom -->
+    </div>    
     <!-- /.container -->
   </footer>
 
