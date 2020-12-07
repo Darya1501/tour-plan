@@ -68,5 +68,28 @@ $(document).ready(function () {
     }
   }
 
+  //обработка форм
+  $(".form").each(function() {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+      name: {
+        required: "Please specify your name",
+        minlength: "Name must be at least 2 letters"
+      },
+      phone: {
+        required: "Рhone number is required"
+      },
+      email: {
+        required: "We need your email to contact you",
+        email: "Your email address must be in the format of name@domain.com"
+      }
+    }
+    });
+  })
+
+  $(document).ready(function(){
+    $('.phone').mask('+7 (000) 000-00-00');
+  });
 
 });

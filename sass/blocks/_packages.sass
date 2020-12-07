@@ -43,10 +43,19 @@
         height: 100%
         object-fit: cover
       &-offer
+        font-size: 8px
+        min-width: 60px
+        height: 18px
+        border-radius: 0px 4px 4px 0px
         position: absolute
-        top: 26px
-        left: -4px
+        top: 27px
+        left: 0
         z-index: 20
+        &--first
+          font-size: 12px
+          height: 30px
+          min-width: 95px
+          padding-top: 8px
     &__booking
       display: flex
       flex-direction: column
@@ -62,19 +71,22 @@
         padding-right: 32px
       &--pb-2
         padding-bottom: 25px
-    &__stars
-      margin-bottom: 5px
     &__title
       font-weight: bold
       font-size: 18px
       line-height: 23px
       margin-bottom: 23px
+      &--first
+        margin-top: -2px
     &__describe
       margin-bottom: 45px
       font-size: 14px
       line-height: 22px
     &__room
       margin-bottom: 24px
+      &--first
+        margin-bottom: 36px
+        margin-left: 1px
     &__text
       display: flex
       align-items: center
@@ -97,12 +109,15 @@
         font-size: 14px
         line-height: 18px
         text-decoration-line: line-through
+        margin-top: -2px
         margin-bottom: 5px
       &--new
         font-weight: bold
         font-size: 24px
         line-height: 30px
     &__button
+      width: 120px
+      min-height: 40px
       background-color: $primary
       color: $light
       border-radius: 4px
