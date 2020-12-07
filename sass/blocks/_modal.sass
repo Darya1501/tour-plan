@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .modal
   &__overlay
     position: fixed
@@ -61,3 +62,68 @@
 .invalid
   color: $primary
   border-bottom: 1px solid $primary
+=======
+.modal
+  &__overlay
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(0, 143, 223, 0.39)
+    z-index: 100
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.5s
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__dialog
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 478px
+    min-width: 280px
+    padding: 33px 88px
+    background-color: $dark
+    color: $light
+    border-radius: 8px
+    z-index: 101
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.5s
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__title
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    // margin-bottom: 10px
+    text-align: center
+  &__close
+    position: absolute
+    top: 17px
+    right: 18px
+  &__input
+    width: 100%
+    margin-top: 15px
+  &__message
+    width: 100%
+    min-height: 123px
+    margin-top: 15px
+  &__button
+    margin-top: 15px
+    min-width: 160px
+    min-height: 50px
+  &__info
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #E0E0E0
+.invalid
+  color: $primary
+  border-bottom: 1px solid $primary
+>>>>>>> cc9cc7865e9e880c138cab667fe28dca48cddb1c
