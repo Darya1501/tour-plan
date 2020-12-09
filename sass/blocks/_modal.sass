@@ -19,7 +19,7 @@
     left: 50%
     transform: translate(-50%, -50%)
     max-width: 478px
-    min-width: 280px
+    min-width: 290px
     padding: 33px 88px
     background-color: $dark
     color: $light
@@ -31,12 +31,13 @@
     &--visible
       visibility: visible
       opacity: 1
+      max-height: 90%
+      overflow-y: auto
   &__title
     text-transform: uppercase
     font-weight: bold
     font-size: 18px
     line-height: 23px
-    // margin-bottom: 10px
     text-align: center
   &__close
     position: absolute

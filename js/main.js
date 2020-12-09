@@ -15,24 +15,14 @@ $(document).ready(function () {
     },
   })
 
-  ymaps.ready(init);
-  function init(){
-    var myMap = new ymaps.Map("map", {
-      center: [18.37692830327793, -68.8453883874109],
-      zoom: 19
-    });
-  }
-
   var reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,
-
     // Navigation arrows
     navigation: {
       nextEl: '.reviews-slider__button--next',
       prevEl: '.reviews-slider__button--prev',
     },
-
     keyboard: {
       enabled: true,
       onlyInViewport: false,
@@ -78,7 +68,8 @@ $(document).ready(function () {
         minlength: "Name must be at least 2 letters"
       },
       phone: {
-        required: "Рhone number is required"
+        required: "Рhone number is required",
+        minlength: "Enter your full number"
       },
       email: {
         required: "We need your email to contact you",
@@ -91,5 +82,7 @@ $(document).ready(function () {
   $(document).ready(function(){
     $('.phone').mask('+7 (000) 000-00-00');
   });
+
+  AOS.init();
 
 });

@@ -7,14 +7,26 @@
       &__image
         height: 100%
         object-fit: cover
+  .grid
+    &-item
+      &__booking
+        &--first
+          padding: 29px 21px 30px 23px
+      &__describe
+        margin-bottom: 20px
   .card
     width: 230px
     height: 230px
   .footer
+    &-wrapper
+      grid-template-columns: 200px 260px 230px 195px
     &__input
       &-group
         flex-basis: 100%
 @media(max-width: 992px)
+  .button
+    &::hover
+      display: none
   .container, .newsletter-wrapper
     max-width: 700px
   .logo
@@ -127,7 +139,9 @@
       transform: translateX(0%)
   .modal
     &__dialog
-      padding: 33px 35%
+      padding: 33px 35px
+    &__message
+      min-height: 100px
 
 @media(max-width: 768px)
   .container
@@ -366,6 +380,13 @@
         flex-basis: 100%
     &__info
       order: 0
+  .modal
+    &__dialog
+      position: fixed
+      top: 10px
+      left: 10px
+      right: 10px
+      transform: translate(0, 0)
 
 @media(max-width: 330px)
   .container, .newsletter-wrapper
@@ -400,6 +421,62 @@
   .reviews
     padding-bottom: 50px
   .activities
+    padding-top: 43px
+    padding-bottom: 40px
     &__title
       font-size: 18px
       line-height: 23px
+    &__card
+      &:nth-child(2)
+        margin-bottom: 28px
+  .footer
+    padding-top: 70px
+    &-wrapper
+      grid-row-gap: 30px
+      margin-bottom: 32px
+    &__logo
+      margin-top: -2px
+    &__social-network
+      flex-wrap: wrap
+    &__title--inline
+      margin-bottom: 20px
+    &__social-network
+      margin-top: 11px
+    &__additional
+      margin-top: 3px
+    &__categories
+      margin-top: 3px
+    &__icon-wrapper
+      min-width: 25px
+    &__item--mb-2
+      margin-bottom: 27px
+    &__contact-form
+      margin-top: 0
+    &__title--mb-32
+      margin-bottom: 14px
+    &__message
+      margin-bottom: 15px
+    &__wrapper
+      flex-wrap: wrap
+    &__info
+      flex-basis: 100%
+      order: -1
+      margin-bottom: 14px
+    &-disclaimer
+      margin-bottom: 10px
+
+@media(max-height: 500px)
+  .modal
+    &__input
+      max-height: 30px
+      &::placeholder
+        font-size: 10px
+    &__message
+      max-height: 80px
+      &::placeholder
+        font-size: 10px
+    &__button
+      min-width: 130px
+      min-height: 40px
+  .invalid
+    font-size: 10px
