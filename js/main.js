@@ -15,24 +15,14 @@ $(document).ready(function () {
     },
   })
 
-  ymaps.ready(init);
-  function init(){
-    var myMap = new ymaps.Map("map", {
-      center: [18.37692830327793, -68.8453883874109],
-      zoom: 19
-    });
-  }
-
   var reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,
-
     // Navigation arrows
     navigation: {
       nextEl: '.reviews-slider__button--next',
       prevEl: '.reviews-slider__button--prev',
     },
-
     keyboard: {
       enabled: true,
       onlyInViewport: false,
@@ -56,16 +46,18 @@ $(document).ready(function () {
     var targetModal = $(this).attr("data-href");    
     $(targetModal).find(".modal__overlay").addClass("modal__overlay--visible");
     $(targetModal).find(".modal__dialog").addClass("modal__dialog--visible");
+    $('body').css('overflow','hidden');
   }
 
   function closeModal(event) {
-    event.preventDefault();
+    $('body').css('overflow','auto');    
     if (event.key === "Escape" || event.type === 'click') {
         var modalOverlay = $(".modal__overlay");
         var modalDialog = $(".modal__dialog");
         modalOverlay.removeClass("modal__overlay--visible");
         modalDialog.removeClass("modal__dialog--visible");
     }
+    event.preventDefault();
   }
 
   //обработка форм
@@ -78,11 +70,12 @@ $(document).ready(function () {
         minlength: "Name must be at least 2 letters"
       },
       phone: {
-        required: "Рhone number is required"
+        required: "Рhone number is required",
+        minlength: "Enter your full number"
       },
       email: {
         required: "We need your email to contact you",
-        email: "Your email address must be in the format of name@domain.com"
+        email: "Your email must be in the format of name@domain.com"
       }
     }
     });
@@ -91,5 +84,7 @@ $(document).ready(function () {
   $(document).ready(function(){
     $('.phone').mask('+7 (000) 000-00-00');
   });
+
+  AOS.init();
 
 });
