@@ -66,11 +66,30 @@
 .invalid
   color: $primary
   border-bottom: 1px solid $primary
+// label.invalid
+//   font-size: 10px
+//   position: absolute
+//   bottom: -11px
+//   left: 5px
+//   color: $primary
+//   border-bottom: none
+//   text-decoration: underline
+
 label.invalid
-  font-size: 10px
   position: absolute
-  bottom: -11px
-  left: 5px
-  color: $primary
-  border-bottom: none
-  text-decoration: underline
+  top: -20px
+  left: 15px
+  font-size: 14px
+  background-color: #f35371
+  color: #fff
+  padding: 5px 10px
+  border-radius: 5px
+  &::after
+    content: ''
+    position: absolute
+    left: 15px
+    bottom: -5px
+    background-color: #f35371
+    width: 10px
+    height: 10px
+    transform: rotate(45deg)

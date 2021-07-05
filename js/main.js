@@ -2,6 +2,7 @@ $(document).ready(function () {
   var hotelSlider = new Swiper('.hotel-slider', {
     // Optional parameters
     loop: true,
+    autoHeight: true,
 
     // Navigation arrows
     navigation: {
@@ -27,6 +28,7 @@ $(document).ready(function () {
       enabled: true,
       onlyInViewport: false,
     },
+    autoHeight: true
   })
 
   var menuButton = $(".menu-button");
